@@ -92,7 +92,15 @@ public class DynamicGraphActivity extends Activity {
           						e.printStackTrace();
           					}
           					Point p = MockData.getDataFromReceiver(i); // We got new data!
-          					line.addNewPoints(p); // Add it to our graph
+          					//line.addNewPoints(p); // Add it to our graph
+          					
+          					if (i > 30){
+          						line.delPoint(0);
+          						line.addNewPoints(p);
+          					}else{
+          						line.addNewPoints(p);
+          					}
+          					
           	        		//if(i%5==0)
           					//Toast.makeText(getApplicationContext(), "Heart Rate: " + SAService.avgRate + " min avg: " + SAService.minAvg, Toast.LENGTH_SHORT).show();
 
