@@ -52,6 +52,10 @@ public class LineGraph {
 		dataset.add(p.getX(), p.getY());
 	}
 	
+	public void delPoint(int index){
+		dataset.remove(index);
+	}
+	
 	public void delPoints(){
 		dataset.clear();
 		
